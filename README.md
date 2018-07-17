@@ -6,7 +6,7 @@
 
 `yarn && yarn dev`
 
-It's using apollo-yoga for simplicity. Usage with apollo-server, apollo-engine, etc. is out of the scope of this example. Switching between them is very simple and there are a lot of docs online.
+It's using graphql-yoga for simplicity. Usage with apollo-server, apollo-engine, etc. is out of the scope of this example. Switching between them is very simple and there are a lot of docs online.
 
 # What's happening?
 
