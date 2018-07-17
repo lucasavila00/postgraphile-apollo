@@ -6,17 +6,24 @@
 
 `yarn && yarn dev`
 
-It's using graphql-yoga for simplicity. Configuration of apollo-server, apollo-engine, etc. is out of the scope of this example. Switching between them is very simple (graphql-yoga is built on top of apollo-server) and there are a lot of docs online.
+It's using graphql-yoga for simplicity. Configuration of apollo-server, apollo-engine, etc. is out of the scope of this example.
+
+Switching between them is very simple (graphql-yoga is built on top of apollo-server) and there are a lot of docs online.
 
 # What's happening?
 
 Custom runtime code and postgraphile config is on the ./src/binding folder.
+
 Custom scripts are on the ./src/scripts folder.
+
 The other folders are either generated or the graphql resolvers for the server.
 
 To generate the types and bindings there are 4 steps.
+
 To run them:
+
 `yarn step1 && yarn step2 && yarn step3`
+
 then make the hand fix.
 
 ## Step 1
