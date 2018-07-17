@@ -6,9 +6,10 @@ export interface Context extends ContextParameters {
 }
 
 export const passAuthDown = (ctx: Context) => {
+  const auth = ctx.request.get("Authorization") || "";
   return {
     context: {
-      jwtToken: ctx.request.get("Authorization")
+      jwtToken: auth.startsWith("Bearer ") ? auth.split("Bearer ")[1] : auth
     }
   };
 };
