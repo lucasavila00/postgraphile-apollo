@@ -37,6 +37,7 @@ This front schema imports data fron the generated one so that we don't have to w
 ## Step 4 - Hand fix
 
 This issue is being tracked here: https://github.com/graphql-binding/graphql-binding/issues/141
+
 Change
 
 ```typescript
