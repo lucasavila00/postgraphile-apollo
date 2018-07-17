@@ -38,7 +38,7 @@ This front schema imports data fron the generated one so that we don't have to w
 
 This issue is being tracked here: https://github.com/graphql-binding/graphql-binding/issues/141
 
-Change
+On ./src/generated/binding.ts, change
 
 ```typescript
 export interface BindingConstructor<T> {
