@@ -10,7 +10,7 @@ It's using graphql-yoga for simplicity. Configuration of apollo-server, apollo-e
 
 # What's happening?
 
-Custom runtime code and postgraphile config is on the ./src/binding folder. This is what you have to change.
+Custom runtime code and postgraphile config is on the ./src/binding folder.
 Custom scripts are on the ./src/scripts folder.
 The other folders are either generated or the graphql resolvers for the server.
 
