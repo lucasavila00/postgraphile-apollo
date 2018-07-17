@@ -28,6 +28,10 @@ const getSchema = async () => {
   }
 };
 
+const pgPool = new Pool({
+  connectionString
+});
+
 const fetcher = async (operation: FetcherOperation) => {
   const graphqlContext = operation.context
     ? operation.context.graphqlContext
@@ -36,9 +40,7 @@ const fetcher = async (operation: FetcherOperation) => {
   const postGraphileContextOptions = {
     ...postgraphileSchemaOptions,
     ...graphqlContext,
-    pgPool: new Pool({
-      connectionString
-    })
+    pgPool
   };
   const postgraphileSchema = await getSchema();
   return withPostGraphileContext(postGraphileContextOptions, (context: any) =>
