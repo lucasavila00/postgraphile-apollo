@@ -1,0 +1,13 @@
+# import User, CreateUserPayload from "./generated/schema.graphql"
+
+type Query {
+  me: User
+}
+
+input CreateUserInput {
+  nickname: String!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): CreateUserPayload
+}

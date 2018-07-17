@@ -1,0 +1,36 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "step1": "ts-node src/scripts/genSchema.ts",
+    "step2": "graphql-binding --language typescript --input src/binding/index.ts --outputBinding src/generated/binding.ts",
+    "step3": "CODEGEN_ENUMS_AS_TYPES=TRUE gql-gen --require ts-node/register --template typescript --schema ./src/scripts/importSchema.ts --out ./src/generated/",
+    "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
+    "dev": "npm-run-all --parallel start playground",
+    "playground": "graphql playground",
+    "build": "rimraf dist && tsc",
+    "runjs": "node dist/index.js"
+  },
+  "resolutions": {
+    "graphql": "0.13.2"
+  },
+  "dependencies": {
+    "@types/node": "^10.5.2",
+    "@types/pg": "^7.4.10",
+    "dotenv-cli": "^1.4.0",
+    "graphql-binding": "^2.2.0",
+    "graphql-cli": "^2.16.4",
+    "graphql-code-generator": "^0.10.3",
+    "graphql-codegen-typescript-template": "^0.10.3",
+    "graphql-tools": "^3.0.5",
+    "graphql-yoga": "^1.14.12",
+    "nodemon": "^1.18.2",
+    "npm-run-all": "^4.1.3",
+    "pg": "^7.4.3",
+    "postgraphile": "^4.0.0-rc.2",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  }
+}
