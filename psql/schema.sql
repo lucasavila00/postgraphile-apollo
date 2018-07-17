@@ -15,3 +15,4 @@ CREATE TABLE example.user (
 grant usage on schema example to example_role;
 
 grant select, insert, update, delete on table example.user to example_role;
+grant usage on sequence example.user_id_seq to example_role;
